@@ -1,74 +1,70 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { catalogProducts } from "@/data/catalog-products";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const categories = ["Semua", "Meja", "Kursi", "Sofa", "Tempat Tidur"];
-
-const products = [
-  {
-    id: 1,
-    name: "Meja Makan Minimalis",
-    category: "Meja",
-    description: "Meja makan minimalis dengan desain yang elegan dan modern",
-    image: "/minimalist-wooden-dining-table.webp",
-    price: "Rp 2.500.000",
-  },
-  {
-    id: 2,
-    name: "Kursi Tamu Klasik",
-    category: "Kursi",
-    description: "Kursi tamu klasik dengan detail ukiran yang menarik",
-    image: "/classic-wooden-chair-with-carved-details.webp",
-    price: "Rp 850.000",
-  },
-  {
-    id: 3,
-    name: "Sofa Ruang Tamu",
-    category: "Sofa",
-    description: "Sofa ruang tamu dengan desain yang elegan dan nyaman",
-    image: "/elegant-wooden-sofa-with-cushions.webp",
-    price: "Rp 4.200.000",
-  },
-  {
-    id: 4,
-    name: "Tempat Tidur Ukiran",
-    category: "Tempat Tidur",
-    description: "Tempat tidur ukiran dengan desain yang unik dan menarik",
-    image: "/carved-wooden-bed-frame-with-headboard.webp",
-    price: "Rp 3.800.000",
-  },
-  {
-    id: 5,
-    name: "Meja Kerja Modern",
-    category: "Meja",
-    description: "Meja kerja modern dengan desain yang minimalis dan fungsional",
-    image: "/modern-wooden-desk-with-drawers.webp",
-    price: "Rp 1.800.000",
-  },
-  {
-    id: 6,
-    name: "Set Kursi Makan",
-    category: "Kursi",
-    description: "Set kursi makan dengan desain yang modern dan nyaman",
-    image: "/set-of-wooden-dining-chairs.webp",
-    price: "Rp 1.200.000",
-  },
-];
+const categories = ["Semua", "Almari", "Bed", "Dining Set", "Sofa", "Kursi Tamu"];
 
 export function ProductCategories() {
   const [activeCategory, setActiveCategory] = useState("Semua");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage, setProductsPerPage] = useState(6);
+
+  // Update productsPerPage based on screen size
+  useEffect(() => {
+    const updateProductsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setProductsPerPage(1);
+      } else {
+        setProductsPerPage(6);
+      }
+    };
+
+    updateProductsPerPage();
+    window.addEventListener('resize', updateProductsPerPage);
+    return () => window.removeEventListener('resize', updateProductsPerPage);
+  }, []);
 
   const filteredProducts =
     activeCategory === "Semua"
-      ? products
-      : products.filter((product) => product.category === activeCategory);
+      ? catalogProducts
+      : catalogProducts.filter((product) => product.category === activeCategory);
+
+  // Reset to first page when category changes
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setCurrentPage(1);
+  };
+
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
-    <section id="products" className="py-16 bg-background">
+    <section id="catalog-products" className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
@@ -76,8 +72,13 @@ export function ProductCategories() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Pilih dari berbagai kategori furniture berkualitas tinggi dengan
-            craftsmanship terbaik dari Jepara
+            craftsmanship terbaik dari Jepara. Unduh katalog produk kami untuk melihat lebih lanjut.
           </p>
+          <a href="/doc/CATALOG-NWW-ALL-PRODUCT.pdf" target="_blank" rel="noopener noreferrer" download="CATALOG-NWW-ALL-PRODUCT.pdf">
+            <Button variant="outline" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground hover:bg-primary/80">
+              Unduh Katalog
+            </Button>
+          </a>
         </div>
 
         {/* Category Filter Buttons */}
@@ -91,7 +92,7 @@ export function ProductCategories() {
             >
               <Button
                 variant={activeCategory === category ? "default" : "outline"}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => handleCategoryChange(category)}
                 className={`${
                   activeCategory === category
                     ? "bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -107,7 +108,7 @@ export function ProductCategories() {
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="wait">
-            {filteredProducts.map((product, index) => (
+            {currentProducts.map((product, index) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -142,12 +143,6 @@ export function ProductCategories() {
                         <span className="text-lg font-bold text-primary">
                           {product.price}
                         </span>
-                        {/* <Button
-                          size="sm"
-                          className="bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer"
-                        >
-                          Lihat Detail
-                        </Button> */}
                       </div>
                     </div>
                   </CardContent>
@@ -157,15 +152,79 @@ export function ProductCategories() {
           </AnimatePresence>
         </div>
 
-        {/* <div className="text-center mt-12">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-          >
-            Lihat Semua Produk
-          </Button>
-        </div> */}
+        {/* Mobile Pagination - Only visible on mobile */}
+        {totalPages > 1 && (
+          <div className="md:hidden mt-8">
+            <div className="flex items-center justify-center gap-2">
+              {/* Previous Button */}
+              <Button
+                variant="default"
+                size="sm"
+                onClick={goToPreviousPage}
+                disabled={currentPage === 1}
+                className="flex items-center gap-1"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
+
+              {/* Page Numbers */}
+              <div className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, index) => {
+                  const pageNumber = index + 1;
+                  // Show first page, last page, current page, and pages around current
+                  const shouldShow = 
+                    pageNumber === 1 || 
+                    pageNumber === totalPages || 
+                    (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1);
+
+                  if (shouldShow) {
+                    return (
+                      <Button
+                        key={pageNumber}
+                        variant={currentPage === pageNumber ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => goToPage(pageNumber)}
+                        className={`w-8 h-8 p-0 ${
+                          currentPage === pageNumber
+                            ? "bg-primary hover:bg-primary/90 text-primary-foreground"
+                            : "border-border hover:bg-muted"
+                        }`}
+                      >
+                        {pageNumber}
+                      </Button>
+                    );
+                  } else if (
+                    pageNumber === currentPage - 2 || 
+                    pageNumber === currentPage + 2
+                  ) {
+                    return (
+                      <span key={pageNumber} className="px-2 text-muted-foreground">
+                        ...
+                      </span>
+                    );
+                  }
+                  return null;
+                })}
+              </div>
+
+              {/* Next Button */}
+              <Button
+                variant="default"
+                size="sm"
+                onClick={goToNextPage}
+                disabled={currentPage === totalPages}
+                className="flex items-center gap-1"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+
+            {/* Page Info */}
+            <div className="text-center mt-4 text-sm text-muted-foreground">
+              Halaman {currentPage} dari {totalPages} ({filteredProducts.length} produk)
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

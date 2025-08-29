@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -85,7 +84,6 @@ export function Portofolio() {
   const maxIndex = Math.max(0, portfolioItems.length - itemsPerView);
   const currentItems = portfolioItems.slice(currentIndex, currentIndex + itemsPerView);
   
-  // Ensure currentIndex doesn't exceed maxIndex
   useEffect(() => {
     if (currentIndex > maxIndex) {
       setCurrentIndex(maxIndex);
@@ -106,10 +104,8 @@ export function Portofolio() {
     });
   };
 
-
-
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="portofolio" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4">Portofolio</h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
@@ -118,35 +114,31 @@ export function Portofolio() {
         
         <div className="relative max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AnimatePresence mode="wait">
-              {currentItems.map((item, index) => (
-                <motion.div
-                  key={`${currentIndex}-${item.id}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative h-80 md:h-72 lg:h-80 overflow-hidden rounded-lg shadow-xl group"
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    width={400}
-                    height={400}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h3 className="text-lg md:text-xl font-bold mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-200 text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+            {currentItems.map((item, index) => (
+              <div
+                key={`${currentIndex}-${item.id}`}
+                className="relative h-80 md:h-72 lg:h-80 overflow-hidden rounded-lg shadow-xl group animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  width={400}
+                  height={400}
+                  priority={index < 3}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="text-lg md:text-xl font-bold mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {portfolioItems.length > itemsPerView && (

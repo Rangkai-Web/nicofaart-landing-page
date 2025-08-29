@@ -63,6 +63,12 @@ export function Navbar() {
                   Katalog Produk
                 </a>
                 <a
+                  href="#portofolio"
+                  className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  Portofolio
+                </a>
+                <a
                   href="#about"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
@@ -88,7 +94,7 @@ export function Navbar() {
             {/* Mobile menu button */}
             <div className="md:hidden" ref={buttonRef}>
               <Button
-                variant="ghost"
+                variant="default"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
               >
@@ -119,6 +125,13 @@ export function Navbar() {
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
               >
                 Katalog Produk
+              </a>
+              <a
+                href="#portofolio"
+                onClick={() => setIsOpen(false)}
+                className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
+              >
+                Portofolio
               </a>
               <a
                 href="#about"

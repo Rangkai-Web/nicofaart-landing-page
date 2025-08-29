@@ -116,8 +116,7 @@ export function Footer() {
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            © {new Date().getFullYear()} NICOFAART. Semua hak cipta dilindungi.
-            | Furniture Asli JEPARA
+            © {new Date().getFullYear()} NICOFAART | Furniture Asli JEPARA
           </p>
         </div>
       </div>

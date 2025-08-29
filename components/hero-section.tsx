@@ -96,7 +96,7 @@ export function HeroSection() {
           </p>
           <div className="flex flex-col items-center sm:flex-row gap-4 justify-center pointer-events-auto">
             <a
-              href="#products"
+              href="#catalog-products"
               className="bg-primary w-max hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-full cursor-pointer hover:text-white"
             >
               Lihat Katalog

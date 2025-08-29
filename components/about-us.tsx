@@ -5,10 +5,14 @@ export function AboutUs() {
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
           NICOFAART
         </h2>
-        <p className="text-lg text-muted-foreground mb-8 text-pretty">adalah jasa Furniture Asli Jepara yang berkualitas tinggi.
-          Kami menyediakan berbagai macam furniture dengan desain yang unik dan menarik.
-          Kami juga menyediakan jasa pembuatan furniture sesuai dengan keinginan Anda.
-          Berlokasi di Jepara, Jawa Tengah, kami memiliki pengrajin yang berpengalaman dan berkualitas tinggi.
+        <p className="text-lg text-muted-foreground mb-8 text-pretty">
+          Didirikan pada tahun 2017, kami telah berpengalaman dalam industri ini selama
+          lebih dari 5 tahun. Tim kami terdiri dari tukang kayu berpengalaman. Kami percaya bahwa
+          furniture jepara memiliki kualitas yang sangat baik serta sudah diakui di dalam negeri
+          maupun luar negeri. Kami menawarkan berbagai macam produk mulai dari sofa,
+          meja, kursi, hingga aksesori dekorasi yang dapat disesuaikan
+          dengan kebutuhan dan keinginan Anda. Mari jelajahi koleksi kami dan
+          menemukan furniture yang sempurna untuk Anda.
         </p>
       </div>
     </section>

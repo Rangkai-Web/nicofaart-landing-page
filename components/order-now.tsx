@@ -10,7 +10,7 @@ export function OrderNow() {
         <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4 text-balance">
           Siap Mewujudkan Rumah Impian Anda?
         </h2>
-        <p className="text-lg text-primary-foreground/90 mb-0 text-pretty">
+        <p className="text-lg text-primary-foreground mb-0 text-pretty">
           Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran
           terbaik untuk furniture berkualitas tinggi
         </p>
