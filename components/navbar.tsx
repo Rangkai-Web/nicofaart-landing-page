@@ -57,10 +57,10 @@ export function Navbar() {
                   Beranda
                 </a>
                 <a
-                  href="#products"
+                  href="#catalog-products"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
-                  Produk
+                  Katalog Produk
                 </a>
                 <a
                   href="#about"
@@ -114,11 +114,11 @@ export function Navbar() {
                 Beranda
               </a>
               <a
-                href="#products"
+                href="#catalog-products"
                 onClick={() => setIsOpen(false)}
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
               >
-                Produk
+                Katalog Produk
               </a>
               <a
                 href="#about"

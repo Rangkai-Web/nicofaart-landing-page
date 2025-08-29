@@ -65,10 +65,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#products"
+                  href="#catalog-products"
                   className="text-background/80 hover:text-primary transition-colors"
                 >
-                  Produk
+                  Katalog Produk
                 </a>
               </li>
               <li>

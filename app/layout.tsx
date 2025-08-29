@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   keywords:
     "furniture asli jepara, mebel jepara, interior furniture, meja kayu jepara, kursi jepara, sofa kayu, tempat tidur kayu, furniture berkualitas, woodwork jepara",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon_io/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { url: "/favicon_io/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon_io/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "NICOFAART - Furniture Asli JEPARA",
     description:
