@@ -109,7 +109,9 @@ export function Portofolio() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4">Portofolio</h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Discover our collection of handcrafted wooden furniture pieces, each telling a unique story of craftsmanship and quality.
+          Portofolio kami adalah bukti nyata dari komitmen kami
+          terhadap kualitas dan dedikasi dalam memberikan produk dan
+          pelayanan yang terbaik bagi pelanggan.
         </p>
         
         <div className="relative max-w-6xl mx-auto">

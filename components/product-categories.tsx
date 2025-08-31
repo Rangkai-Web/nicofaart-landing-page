@@ -72,7 +72,7 @@ export function ProductCategories() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Pilih dari berbagai kategori furniture berkualitas tinggi dengan
-            craftsmanship terbaik dari Jepara. Unduh katalog produk kami untuk melihat lebih lanjut.
+            tukang kayu terbaik dari Jepara. Unduh katalog produk kami untuk melihat lebih lanjut.
           </p>
           <a href="/doc/CATALOG-NWW-ALL-PRODUCT.pdf" target="_blank" rel="noopener noreferrer" download="CATALOG-NWW-ALL-PRODUCT.pdf">
             <Button variant="outline" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground hover:bg-primary/80">

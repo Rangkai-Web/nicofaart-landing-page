@@ -11,7 +11,7 @@ export function WhyChooseUs() {
     },
     {
       icon: Users,
-      title: "Craftsman Berpengalaman",
+      title: "Tukang Kayu Berpengalaman",
       description:
         "Dikerjakan oleh pengrajin Jepara berpengalaman dengan teknik tradisional yang telah teruji.",
     },

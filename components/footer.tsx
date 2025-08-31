@@ -21,7 +21,7 @@ export function Footer() {
             </div>
             <p className="text-background/80 mb-4 text-pretty">
               Perusahaan furniture berkualitas tinggi yang bergerak di bidang
-              interior dengan craftsmanship terbaik dari Jepara, Jawa Tengah.
+              interior dengan tukang kayu terbaik dari Jepara, Jawa Tengah.
             </p>
             <div className="flex space-x-4">
               <a

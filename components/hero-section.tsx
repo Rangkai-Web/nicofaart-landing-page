@@ -90,7 +90,7 @@ export function HeroSection() {
             Furniture Asli JEPARA
           </h1>
           <p className="text-lg md:text-xl mb-8 text-pretty max-w-2xl mx-auto">
-            Craftsmanship terbaik dari Jepara dengan kualitas premium. Meja,
+            Tukang kayu terbaik dari Jepara dengan kualitas premium. Meja,
             kursi, sofa, dan furniture interior berkualitas tinggi untuk rumah
             impian Anda.
           </p>

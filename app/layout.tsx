@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "NICOFAART - Furniture Asli JEPARA | Interior Furniture Berkualitas",
   description:
-    "NICOFAART menyediakan furniture asli Jepara berkualitas tinggi. Meja, kursi, sofa, dan tempat tidur dengan craftsmanship terbaik dari Jepara, Jawa Tengah.",
+    "NICOFAART menyediakan furniture asli Jepara berkualitas tinggi. Meja, kursi, sofa, dan tempat tidur dengan tukang kayu terbaik dari Jepara, Jawa Tengah.",
   keywords:
     "furniture asli jepara, mebel jepara, interior furniture, meja kayu jepara, kursi jepara, sofa kayu, tempat tidur kayu, furniture berkualitas, woodwork jepara",
   generator: "v0.app",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NICOFAART - Furniture Asli JEPARA",
     description:
-      "Furniture asli Jepara berkualitas tinggi dengan craftsmanship terbaik",
+      "Furniture asli Jepara berkualitas tinggi dengan tukang kayu terbaik",
     type: "website",
     locale: "id_ID",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NICOFAART - Furniture Asli JEPARA",
     description:
-      "Furniture asli Jepara berkualitas tinggi dengan craftsmanship terbaik",
+      "Furniture asli Jepara berkualitas tinggi dengan tukang kayu terbaik",
   },
 };
 
