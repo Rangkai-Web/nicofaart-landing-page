@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { catalogProducts } from "@/data/catalog-products";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, PhoneCall } from "lucide-react";
 
 const categories = ["Semua", "Almari", "Bed", "Dining Set", "Sofa", "Kursi Tamu"];
 
@@ -139,11 +139,20 @@ export function ProductCategories() {
                       <p className="text-sm text-muted-foreground mb-3">
                         {product.description}
                       </p>
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-between items-center mb-4">
                         <span className="text-lg font-bold text-primary">
                           {product.price}
                         </span>
                       </div>
+                      <a
+                        href={`https://wa.me/6289647662838?text=Halo, saya ingin memesan ${product.name} dengan harga ${product.price}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-start gap-2 w-max bg-primary text-primary-foreground text-sm font-medium rounded-full px-4 py-2"
+                      >
+                        <PhoneCall className="w-4 h-4" />
+                        Pesan Sekarang
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
