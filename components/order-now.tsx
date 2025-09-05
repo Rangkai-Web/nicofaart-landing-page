@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 // import { Button } from "@/components/ui/button";
 // import { Phone, MessageCircle } from "lucide-react";
 
@@ -14,6 +15,16 @@ export function OrderNow() {
           Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran
           terbaik untuk furniture berkualitas tinggi
         </p>
+        <div className="flex items-center justify-center mt-6">
+          <Image
+            src="/rekening.webp"
+            alt="Rekening"
+            width={100}
+            height={100}
+            className="w-96 h-96 rounded-lg shadow-lg"
+            draggable={false}
+          />
+        </div>
 
         {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button

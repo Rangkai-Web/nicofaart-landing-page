@@ -6,9 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { catalogProducts } from "@/data/catalog-products";
-import { ChevronLeft, ChevronRight, PhoneCall } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
-const categories = ["Semua", "Almari", "Bed", "Dining Set", "Sofa", "Kursi Tamu"];
+const categories = ["Semua", "Almari", "Bed", "Dining Set", "Kursi Tamu", "Sofa"];
 
 export function ProductCategories() {
   const [activeCategory, setActiveCategory] = useState("Semua");
@@ -130,6 +131,7 @@ export function ProductCategories() {
                         height={256}
                         className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                         style={{ height: "auto" }}
+                        draggable={false}
                       />
                     </div>
                     <div className="p-6">
@@ -150,7 +152,7 @@ export function ProductCategories() {
                         rel="noopener noreferrer"
                         className="flex items-center justify-start gap-2 w-max bg-primary text-primary-foreground text-sm font-medium rounded-full px-4 py-2"
                       >
-                        <PhoneCall className="w-4 h-4" />
+                        <FaWhatsapp className="w-4 h-4" />
                         Pesan Sekarang
                       </a>
                     </div>

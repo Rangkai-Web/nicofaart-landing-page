@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { AboutUs } from "@/components/about-us";
-import { StatsSection } from "@/components/stats-section";
+// import { StatsSection } from "@/components/stats-section";
+import { VideoSection } from "@/components/video-section";
 import { ProductCategories } from "@/components/product-categories";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import { Portofolio } from "@/components/portofolio";
@@ -16,7 +17,8 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <AboutUs />
-      <StatsSection />
+      {/* <StatsSection /> */}
+      <VideoSection />
       <ProductCategories />
       <WhyChooseUs />
       <Portofolio />

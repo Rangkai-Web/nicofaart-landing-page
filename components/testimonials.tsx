@@ -85,6 +85,7 @@ export function Testimonials() {
                           width={80}
                           height={80}
                           className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+                          draggable={false}
                         />
 
                         <div className="flex justify-center mb-4">

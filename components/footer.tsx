@@ -16,6 +16,7 @@ export function Footer() {
                 width={100}
                 height={100}
                 className="w-10 h-10 rounded-full"
+                draggable={false}
               />
               <h3 className="text-2xl font-bold text-primary">NICOFAART</h3>
             </div>

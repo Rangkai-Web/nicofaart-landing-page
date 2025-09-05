@@ -3,63 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-
-const portfolioItems = [
-  {
-    id: 1,
-    image: "/beautiful-wooden-bedroom-furniture-set-with-bed-an.webp",
-    title: "Beautiful Wooden Bedroom Set",
-    description: "Complete bedroom furniture set with elegant wooden design"
-  },
-  {
-    id: 2,
-    image: "/carved-wooden-bed-frame-with-headboard.webp",
-    title: "Carved Wooden Bed Frame",
-    description: "Handcrafted bed frame with intricate carvings"
-  },
-  {
-    id: 3,
-    image: "/classic-wooden-chair-with-carved-details.webp",
-    title: "Classic Wooden Chair",
-    description: "Timeless wooden chair with detailed carvings"
-  },
-  {
-    id: 4,
-    image: "/elegant-wooden-dining-table-with-chairs-in-modern-.webp",
-    title: "Elegant Dining Table Set",
-    description: "Modern dining table with matching chairs"
-  },
-  {
-    id: 5,
-    image: "/elegant-wooden-sofa-with-cushions.webp",
-    title: "Elegant Wooden Sofa",
-    description: "Comfortable sofa with wooden frame and cushions"
-  },
-  {
-    id: 6,
-    image: "/luxury-wooden-sofa-set-in-contemporary-interior.webp",
-    title: "Luxury Wooden Sofa Set",
-    description: "Premium sofa set for contemporary interiors"
-  },
-  {
-    id: 7,
-    image: "/minimalist-wooden-dining-table.webp",
-    title: "Minimalist Dining Table",
-    description: "Clean and simple wooden dining table design"
-  },
-  {
-    id: 8,
-    image: "/modern-wooden-desk-with-drawers.webp",
-    title: "Modern Wooden Desk",
-    description: "Functional desk with storage drawers"
-  },
-  {
-    id: 9,
-    image: "/set-of-wooden-dining-chairs.webp",
-    title: "Wooden Dining Chairs",
-    description: "Set of beautifully crafted dining chairs"
-  }
-];
+import { portfolioItems } from "@/data/portofolio";
 
 export function Portofolio() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -119,26 +63,27 @@ export function Portofolio() {
             {currentItems.map((item, index) => (
               <div
                 key={`${currentIndex}-${item.id}`}
-                className="relative h-80 md:h-72 lg:h-80 overflow-hidden rounded-lg shadow-xl group animate-fade-in"
+                className="relative h-full overflow-hidden rounded-lg shadow-xl group animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.image}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
                   height={400}
                   priority={index < 3}
+                  draggable={false}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                {/* <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <h3 className="text-lg md:text-xl font-bold mb-1">
                     {item.title}
                   </h3>
                   <p className="text-gray-200 text-sm">
                     {item.description}
                   </p>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

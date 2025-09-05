@@ -13,13 +13,13 @@ export function WhyChooseUs() {
       icon: Users,
       title: "Tukang Kayu Berpengalaman",
       description:
-        "Dikerjakan oleh pengrajin Jepara berpengalaman dengan teknik tradisional yang telah teruji.",
+        "Dikerjakan oleh tukang kayu Jepara berpengalaman lebih dari 10 tahun yang telah teruji.",
     },
     {
       icon: Truck,
       title: "Pengiriman Aman",
       description:
-        "Sistem packaging khusus dan pengiriman ke seluruh Indonesia dengan asuransi penuh.",
+        "Sistem packaging khusus dan pengiriman ke seluruh Indonesia dengan pelayanan terbaik yang memuaskan pelanggan.",
     },
     {
       icon: Shield,
@@ -41,6 +41,7 @@ export function WhyChooseUs() {
               height={500}
               alt="Pengrajin NICOFAART"
               className="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
+              draggable={false}
             />
           </div>
 
@@ -50,8 +51,8 @@ export function WhyChooseUs() {
               Mengapa Memilih Kami?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-pretty">
-              NICOFAART telah dipercaya sebagai produsen furniture kayu Jepara
-              berkualitas tinggi dengan komitmen pada kepuasan pelanggan.
+              NICOFAART telah dipercaya sebagai produsen furniture kayu asli Jepara yang berkompeten
+              dengan komitmen pada kepuasan pelanggan.
             </p>
 
             <div className="space-y-6">

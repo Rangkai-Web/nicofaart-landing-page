@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -61,6 +60,7 @@ export function HeroSection() {
               alt={image.alt}
               priority={index === 0}
               className="w-full h-full object-cover"
+              draggable={false}
             />
             <div className="absolute inset-0 bg-black/40 z-0" />
           </div>
@@ -90,7 +90,7 @@ export function HeroSection() {
             Furniture Asli JEPARA
           </h1>
           <p className="text-lg md:text-xl mb-8 text-pretty max-w-2xl mx-auto">
-            Tukang kayu terbaik dari Jepara dengan kualitas premium. Meja,
+            Produsen furniture dari Jepara dengan kualitas premium. Meja,
             kursi, sofa, dan furniture interior berkualitas tinggi untuk rumah
             impian Anda.
           </p>
