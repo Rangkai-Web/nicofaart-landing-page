@@ -40,7 +40,7 @@ export function WhyChooseUs() {
               width={500}
               height={500}
               alt="Pengrajin NICOFAART"
-              className="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
+              className="w-full h-96 lg:h-[500px] object-cover object-top rounded-lg shadow-lg"
               draggable={false}
             />
           </div>
