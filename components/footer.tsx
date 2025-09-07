@@ -50,6 +50,15 @@ export function Footer() {
                 <FaTiktok className="w-6 h-6" />
               </a>
             </div>
+
+            <Image
+              src="/rekening.webp"
+              alt="Rekening"
+              width={100}
+              height={100}
+              className="w-56 h-48 rounded-lg shadow-lg mt-4"
+              draggable={false}
+            />
           </div>
 
           {/* Quick Links */}
@@ -70,6 +79,14 @@ export function Footer() {
                   className="text-background/80 hover:text-primary transition-colors"
                 >
                   Katalog Produk
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#portofolio"
+                  className="text-background/80 hover:text-primary transition-colors"
+                >
+                  Portofolio
                 </a>
               </li>
               <li>

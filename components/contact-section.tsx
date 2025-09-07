@@ -55,7 +55,7 @@ export function ContactSection() {
                 <MapPin className="w-6 h-6 text-primary mt-1" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Alamat (Office)</h3>
+                <h3 className="font-semibold text-foreground mb-1">Alamat</h3>
                 <p className="text-muted-foreground">
                   Jl. Dr. Wahidin No. 49B, Demaan, Jepara, Jawa Tengah
                 </p>
