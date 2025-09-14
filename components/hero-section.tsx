@@ -91,7 +91,7 @@ export function HeroSection() {
           </h1>
           <p className="text-lg md:text-xl mb-8 text-pretty max-w-2xl mx-auto">
             Produsen furniture dari Jepara dengan kualitas premium. Meja,
-            kursi, sofa, dan furniture interior berkualitas tinggi untuk rumah
+            kursi, sofa, dan furniture interior lainnya yang berkualitas tinggi untuk rumah
             impian Anda.
           </p>
           <div className="flex flex-col items-center sm:flex-row gap-4 justify-center pointer-events-auto">

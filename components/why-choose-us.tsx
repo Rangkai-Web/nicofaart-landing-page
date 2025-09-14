@@ -1,5 +1,5 @@
 import { Award, Truck, Shield, Users } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export function WhyChooseUs() {
   const reasons = [
@@ -7,7 +7,7 @@ export function WhyChooseUs() {
       icon: Award,
       title: "Kualitas Premium",
       description:
-        "Menggunakan kayu pilihan terbaik dengan finishing berkualitas tinggi yang tahan lama dan indah.",
+        "Menggunakan kayu jati pilihan dengan finishing berkualitas tinggi yang tahan lama dan indah.",
     },
     {
       icon: Users,
@@ -23,9 +23,9 @@ export function WhyChooseUs() {
     },
     {
       icon: Shield,
-      title: "Garansi Terpercaya",
+      title: "Memberikan Kualitas Pelayanan Yang Memuaskan",
       description:
-        "Garansi kualitas produk dan layanan after-sales yang memuaskan untuk kepuasan pelanggan.",
+        "Kepuasan pelanggan adalah prioritas utama kami. Kami selalu berusaha untuk memberikan kualitas pelayanan yang memuaskan.",
     },
   ];
 
@@ -35,13 +35,22 @@ export function WhyChooseUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="relative">
-            <Image
+            {/* <Image
               src="/skilled-craftsman-working-on-wooden-furniture-in-t.webp"
               width={500}
               height={500}
               alt="Pengrajin NICOFAART"
               className="w-full h-96 lg:h-[500px] object-cover object-top rounded-lg shadow-lg"
               draggable={false}
+            /> */}
+            <video 
+              src="/video/why-us.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full h-96 lg:h-[500px] object-cover object-center rounded-lg shadow-lg bg-black" 
+              controls
             />
           </div>
 

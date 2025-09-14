@@ -5,21 +5,21 @@ import type React from "react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+// import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
+    // firstName: "",
+    // lastName: "",
+    // email: "",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = `Halo NICOFAART, saya ${formData.firstName} ${formData.lastName}. ${formData.message}. Email: ${formData.email}`;
+    const whatsappMessage = `Halo NICOFAART, ${formData.message}`;
     const whatsappUrl = `https://wa.me/6289647662838?text=${encodeURIComponent(
       whatsappMessage
     )}`;
@@ -81,22 +81,6 @@ export function ContactSection() {
                 <p className="text-muted-foreground">asknicofaart@gmail.com</p>
               </div>
             </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <Clock className="w-6 h-6 text-primary mt-1" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-1">
-                  Jam Operasional
-                </h3>
-                <p className="text-muted-foreground">
-                  Senin - Sabtu: 08:00 - 17:00 WIB
-                  <br />
-                  Minggu: 08:00 - 15:00 WIB
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
@@ -106,7 +90,7 @@ export function ContactSection() {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label
                       htmlFor="firstName"
@@ -159,7 +143,7 @@ export function ContactSection() {
                     onChange={handleChange}
                     placeholder="nama@email.com"
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label

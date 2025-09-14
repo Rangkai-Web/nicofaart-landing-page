@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { catalogProducts } from "@/data/catalog-products";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaDownload } from "react-icons/fa";
 
 const categories = ["Semua", "Almari", "Bed", "Dining Set", "Kursi Tamu", "Sofa"];
 
@@ -76,8 +76,8 @@ export function ProductCategories() {
             tukang kayu terbaik dari Jepara. Unduh katalog produk kami untuk melihat lebih lanjut.
           </p>
           <a href="/doc/CATALOG-NWW-ALL-PRODUCT.pdf" target="_blank" rel="noopener noreferrer" download="CATALOG-NWW-ALL-PRODUCT.pdf">
-            <Button variant="outline" className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground hover:bg-primary/80">
-              Unduh Katalog
+            <Button className="mt-8 bg-[#8B1C1C] hover:bg-[#8B1C1C]/90 text-white !p-6 border-0 shadow-2xl hover:shadow-xl transition-all duration-300 animate-bounce">
+              <FaDownload className="w-4 h-4" /> Unduh Katalog
             </Button>
           </a>
         </div>
