@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Home, ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -11,21 +11,13 @@ export default function NotFound() {
         <p className="text-muted-foreground mb-8">
           Maaf, halaman yang Anda cari tidak ditemukan. Silakan kembali ke halaman utama NICOFAART.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Link href="/">
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
               <Home className="w-4 h-4 mr-2" />
               Kembali ke Beranda
             </Button>
           </Link>
-          <Button 
-            variant="outline" 
-            onClick={() => window.history.back()}
-            className="w-full sm:w-auto"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Kembali
-          </Button>
         </div>
       </div>
     </div>
