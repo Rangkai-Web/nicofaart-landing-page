@@ -23,7 +23,7 @@ export function ContactSection() {
     const whatsappUrl = `https://wa.me/6289647662838?text=${encodeURIComponent(
       whatsappMessage
     )}`;
-    window.open(whatsappUrl, "_blank");
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   const handleChange = (

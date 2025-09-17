@@ -1,1 +1,35 @@
-{"name":"NICOFAART","short_name":"NICOFAART","icons":[{"src":"/favicon_io/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/favicon_io/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#d97706","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "NICOFAART - Furniture Asli Jepara",
+  "short_name": "NICOFAART",
+  "description": "Furniture asli Jepara berkualitas tinggi dengan tukang kayu terbaik",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B1C1C",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "shopping", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/logo.webp",
+      "sizes": "1200x630",
+      "type": "image/webp",
+      "form_factor": "wide"
+    }
+  ]
+}

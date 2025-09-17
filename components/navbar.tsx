@@ -86,7 +86,11 @@ export function Navbar() {
 
             {/* Contact Button */}
             <div className="hidden md:block">
-              <Button onClick={() => window.open("https://wa.me/6289647662838", "_blank")} className="bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer">
+              <Button 
+                onClick={() => window.open("https://wa.me/6289647662838", "_blank", "noopener,noreferrer")} 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer"
+                aria-label="Hubungi kami melalui WhatsApp"
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Hubungi Kami
               </Button>
@@ -98,6 +102,9 @@ export function Navbar() {
                 variant="default"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label={isOpen ? "Tutup menu" : "Buka menu"}
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
               >
                 {isOpen ? (
                   <X className="h-6 w-6" />
@@ -111,7 +118,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden" ref={menuRef}>
+          <div className="md:hidden" ref={menuRef} id="mobile-menu">
             <div className="p-6 space-y-1 absolute top-16 left-0 w-full z-[60] bg-card rounded-b-xl shadow-xl">
               <a
                 href="#home"
@@ -148,7 +155,7 @@ export function Navbar() {
               >
                 Kontak
               </a>
-              <Button onClick={() => window.open("https://wa.me/6289647662838", "_blank")} className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer">
+              <Button onClick={() => window.open("https://wa.me/6289647662838", "_blank", "noopener,noreferrer")} className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer">
                 <Phone className="w-4 h-4 mr-2" />
                 Hubungi Kami
               </Button>

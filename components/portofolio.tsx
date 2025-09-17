@@ -68,12 +68,15 @@ export function Portofolio() {
               >
                 <Image
                   src={item.image}
-                  alt={item.image}
+                  alt={`Portofolio furniture ${item.image || 'NICOFAART'} - Karya terbaik dari tukang kayu Jepara`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
                   height={400}
                   priority={index < 3}
                   draggable={false}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={85}
+                  loading={index < 3 ? "eager" : "lazy"}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 {/* <div className="absolute bottom-0 left-0 right-0 p-4 text-white">

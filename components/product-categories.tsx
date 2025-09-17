@@ -132,6 +132,9 @@ export function ProductCategories() {
                         className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                         style={{ height: "auto" }}
                         draggable={false}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        quality={85}
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-6">
@@ -150,7 +153,8 @@ export function ProductCategories() {
                         href={`https://wa.me/6289647662838?text=Halo, saya ingin memesan ${product.name} dengan harga ${product.price}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-start gap-2 w-max bg-primary text-primary-foreground text-sm font-medium rounded-full px-4 py-2"
+                        className="flex items-center justify-start gap-2 w-max bg-primary text-primary-foreground text-sm font-medium rounded-full px-4 py-2 hover:bg-primary/90 transition-colors"
+                        aria-label={`Pesan ${product.name} melalui WhatsApp`}
                       >
                         <FaWhatsapp className="w-4 h-4" />
                         Pesan Sekarang

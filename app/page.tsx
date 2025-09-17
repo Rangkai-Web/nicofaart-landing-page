@@ -13,19 +13,21 @@ import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
-      <HeroSection />
-      <AboutUs />
-      {/* <StatsSection /> */}
-      <VideoSection />
-      <ProductCategories />
-      <WhyChooseUs />
-      <Portofolio />
-      <Testimonials />
-      <OrderNow />
-      <ContactSection />
+      <main className="min-h-screen">
+        <HeroSection />
+        <AboutUs />
+        {/* <StatsSection /> */}
+        <VideoSection />
+        <ProductCategories />
+        <WhyChooseUs />
+        <Portofolio />
+        <Testimonials />
+        <OrderNow />
+        <ContactSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
