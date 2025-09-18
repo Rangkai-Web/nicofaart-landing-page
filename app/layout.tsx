@@ -112,10 +112,10 @@ export default function RootLayout({
     "url": "https://nicofaart.com",
     "logo": "https://nicofaart.com/logo.webp",
     "image": "https://nicofaart.com/logo.webp",
-    "telephone": "+62-xxx-xxx-xxxx",
+    "telephone": "+62-896-4766-2838",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jepara, Jawa Tengah",
+      "streetAddress": "Jl. Dr. Wahidin No. 49B, Demaan, Jepara, Jawa Tengah",
       "addressLocality": "Jepara",
       "addressRegion": "Jawa Tengah",
       "addressCountry": "ID"
