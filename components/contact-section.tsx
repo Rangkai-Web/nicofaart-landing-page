@@ -165,7 +165,8 @@ export function ContactSection() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground min-h-[44px]"
+                  aria-label="Kirim pesan ke NICOFAART"
                 >
                   Kirim Pesan
                 </Button>

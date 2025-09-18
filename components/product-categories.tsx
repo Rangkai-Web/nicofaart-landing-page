@@ -76,7 +76,10 @@ export function ProductCategories() {
             tukang kayu terbaik dari Jepara. Unduh katalog produk kami untuk melihat lebih lanjut.
           </p>
           <a href="/doc/CATALOG-NWW-ALL-PRODUCT.pdf" target="_blank" rel="noopener noreferrer" download="CATALOG-NWW-ALL-PRODUCT.pdf">
-            <Button className="mt-8 bg-[#8B1C1C] hover:bg-[#8B1C1C]/90 text-white !p-6 border-0 shadow-2xl hover:shadow-xl transition-all duration-300 animate-bounce">
+            <Button 
+              className="mt-8 bg-[#8B1C1C] hover:bg-[#8B1C1C]/90 text-white !p-6 border-0 shadow-2xl hover:shadow-xl transition-all duration-300 animate-bounce"
+              aria-label="Unduh katalog produk furniture NICOFAART dalam format PDF"
+            >
               <FaDownload className="w-4 h-4" /> Unduh Katalog
             </Button>
           </a>
@@ -94,11 +97,12 @@ export function ProductCategories() {
               <Button
                 variant={activeCategory === category ? "default" : "outline"}
                 onClick={() => handleCategoryChange(category)}
-                className={`${
+                className={`min-w-[44px] min-h-[44px] ${
                   activeCategory === category
                     ? "bg-primary hover:bg-primary/90 text-primary-foreground"
                     : "border-border hover:bg-muted hover:text-foreground"
                 } cursor-pointer`}
+                aria-label={`Filter produk berdasarkan kategori ${category}`}
               >
                 {category}
               </Button>
@@ -153,7 +157,7 @@ export function ProductCategories() {
                         href={`https://wa.me/6289647662838?text=Halo, saya ingin memesan ${product.name} dengan harga ${product.price}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-start gap-2 w-max bg-primary text-primary-foreground text-sm font-medium rounded-full px-4 py-2 hover:bg-primary/90 transition-colors"
+                        className="flex items-center justify-start gap-2 w-max bg-primary text-primary-foreground text-sm font-medium rounded-full px-4 py-2 hover:bg-primary/90 transition-colors min-w-[44px] min-h-[44px]"
                         aria-label={`Pesan ${product.name} melalui WhatsApp`}
                       >
                         <FaWhatsapp className="w-4 h-4" />
@@ -177,7 +181,8 @@ export function ProductCategories() {
                 size="sm"
                 onClick={goToPreviousPage}
                 disabled={currentPage === 1}
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 min-w-[44px] min-h-[44px]"
+                aria-label="Halaman sebelumnya"
               >
                 <ChevronLeft className="w-4 h-4" />
               </Button>
@@ -199,11 +204,12 @@ export function ProductCategories() {
                         variant={currentPage === pageNumber ? "default" : "outline"}
                         size="sm"
                         onClick={() => goToPage(pageNumber)}
-                        className={`w-8 h-8 p-0 ${
+                        className={`min-w-[44px] min-h-[44px] p-0 ${
                           currentPage === pageNumber
                             ? "bg-primary hover:bg-primary/90 text-primary-foreground"
                             : "border-border hover:bg-muted"
                         }`}
+                        aria-label={`Pergi ke halaman ${pageNumber}`}
                       >
                         {pageNumber}
                       </Button>
@@ -228,7 +234,8 @@ export function ProductCategories() {
                 size="sm"
                 onClick={goToNextPage}
                 disabled={currentPage === totalPages}
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 min-w-[44px] min-h-[44px]"
+                aria-label="Halaman selanjutnya"
               >
                 <ChevronRight className="w-4 h-4" />
               </Button>

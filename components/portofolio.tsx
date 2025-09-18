@@ -95,16 +95,16 @@ export function Portofolio() {
             <>
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full cursor-pointer shadow-lg transition-all duration-200 hover:scale-110 z-10"
-                aria-label="Previous slide"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full cursor-pointer shadow-lg transition-all duration-200 hover:scale-110 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="Slide portofolio sebelumnya"
               >
                 <ChevronLeft size={24} />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full cursor-pointer shadow-lg transition-all duration-200 hover:scale-110 z-10"
-                aria-label="Next slide"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full cursor-pointer shadow-lg transition-all duration-200 hover:scale-110 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="Slide portofolio selanjutnya"
               >
                 <ChevronRight size={24} />
               </button>
@@ -118,12 +118,12 @@ export function Portofolio() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index * itemsPerView)}
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                className={`w-3 h-3 rounded-full transition-all duration-200 flex items-center justify-center ${
                   Math.floor(currentIndex / itemsPerView) === index
                     ? "bg-blue-600 scale-125" 
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
-                aria-label={`Go to slide group ${index + 1}`}
+                aria-label={`Pergi ke grup slide ${index + 1}`}
               />
             ))}
           </div>

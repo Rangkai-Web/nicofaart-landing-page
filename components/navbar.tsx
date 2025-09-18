@@ -54,30 +54,35 @@ export function Navbar() {
                 <a
                   href="#home"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  aria-label="Pergi ke halaman beranda"
                 >
                   Beranda
                 </a>
                 <a
                   href="#catalog-products"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  aria-label="Lihat katalog produk furniture"
                 >
                   Katalog Produk
                 </a>
                 <a
                   href="#portofolio"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  aria-label="Lihat portofolio karya furniture"
                 >
                   Portofolio
                 </a>
                 <a
                   href="#about"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  aria-label="Pelajari tentang perusahaan NICOFAART"
                 >
                   Tentang Kami
                 </a>
                 <a
                   href="#contact"
                   className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  aria-label="Hubungi kami untuk informasi lebih lanjut"
                 >
                   Kontak
                 </a>
@@ -88,7 +93,7 @@ export function Navbar() {
             <div className="hidden md:block">
               <Button 
                 onClick={() => window.open("https://wa.me/6289647662838", "_blank", "noopener,noreferrer")} 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer min-w-[44px] min-h-[44px]"
                 aria-label="Hubungi kami melalui WhatsApp"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -105,6 +110,7 @@ export function Navbar() {
                 aria-label={isOpen ? "Tutup menu" : "Buka menu"}
                 aria-expanded={isOpen}
                 aria-controls="mobile-menu"
+                className="min-w-[44px] min-h-[44px]"
               >
                 {isOpen ? (
                   <X className="h-6 w-6" />
@@ -124,6 +130,7 @@ export function Navbar() {
                 href="#home"
                 onClick={() => setIsOpen(false)}
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
+                aria-label="Pergi ke halaman beranda"
               >
                 Beranda
               </a>
@@ -131,6 +138,7 @@ export function Navbar() {
                 href="#catalog-products"
                 onClick={() => setIsOpen(false)}
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
+                aria-label="Lihat katalog produk furniture"
               >
                 Katalog Produk
               </a>
@@ -138,6 +146,7 @@ export function Navbar() {
                 href="#portofolio"
                 onClick={() => setIsOpen(false)}
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
+                aria-label="Lihat portofolio karya furniture"
               >
                 Portofolio
               </a>
@@ -145,6 +154,7 @@ export function Navbar() {
                 href="#about"
                 onClick={() => setIsOpen(false)}
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
+                aria-label="Pelajari tentang perusahaan NICOFAART"
               >
                 Tentang Kami
               </a>
@@ -152,10 +162,15 @@ export function Navbar() {
                 href="#contact"
                 onClick={() => setIsOpen(false)}
                 className="text-foreground hover:text-primary block px-0 py-2 rounded-md text-base font-medium"
+                aria-label="Hubungi kami untuk informasi lebih lanjut"
               >
                 Kontak
               </a>
-              <Button onClick={() => window.open("https://wa.me/6289647662838", "_blank", "noopener,noreferrer")} className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer">
+              <Button 
+                onClick={() => window.open("https://wa.me/6289647662838", "_blank", "noopener,noreferrer")} 
+                className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground cursor-pointer min-h-[44px]"
+                aria-label="Hubungi kami melalui WhatsApp"
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Hubungi Kami
               </Button>
